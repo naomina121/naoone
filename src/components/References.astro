@@ -1,0 +1,31 @@
+---
+const { references } = Astro.props;
+---
+
+<div class="citation-box">
+  <h2>引用文献</h2>
+  <p>今回、参考にした文献やウェブサイト一覧です。</p>
+  <ul class="list">
+    {references.map((ref) => (
+      <li style="padding:10px 0px; border-bottom:1px dashed #505050">
+        <a style="color:#a193e9;" href={ref.url} target="_blank" rel="noopener noreferrer">
+          {ref.title}
+        </a>
+      </li>
+    ))}
+  </ul>
+</div>
+
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": references.map((ref, index) => ({
+    "@type": "ListItem",
+    "position": index + 1,
+    "item": {
+      "@type": "ScholarlyArticle",
+      "name": ref.title,
+      "url": ref.url
+    }
+  }))
+})} />

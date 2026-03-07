@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /secret/
+Allow: /
+
+Sitemap: https://naomina121.com/sitemap-index.xml

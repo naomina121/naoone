@@ -1,0 +1,29 @@
+---
+import Layout from "./Layout.astro";
+import MainToc from "@components/MainToc.astro";
+function getIsUrl(pathname) {
+  return Astro.url.pathname === pathname;
+}
+
+function getIsUrlStartsWith(pathnameStart) {
+  return Astro.url.pathname.startsWith(pathnameStart);
+}
+const { pageTitle, image, pubDate, modDate } = Astro.props;
+
+---
+<Layout {...Astro.props}>
+{getIsUrl("/") &&
+<h1>NAO&ONE</h1>}
+      {!getIsUrl("/") && !getIsUrl("/contact/") && <h1>{pageTitle}</h1>}
+      {!getIsUrl("/") &&
+    <ul class="tags mb-0 flex flex-wrap gap-2 my-0 w-full justify-end">
+        {pubDate && <li class="mb-2 text-sm">📰作成日:  <time datetime={`${pubDate}T00:00:00+09:00`}>{pubDate.toString().slice(0,10)}</time></li>}
+        {modDate && <li class="mb-2 text-sm">✏️最終更新日: <time datetime={`${modDate}T00:00:00+09:00`}>{modDate.toString().slice(0,10)}</time></li>}
+    </ul>
+  }
+  {image &&
+    <img class="profile-picture max-w-full h-auto" src={image.url} alt={pageTitle} />
+  }
+  {!getIsUrl("/404")&&!getIsUrl("/updates/") && !getIsUrlStartsWith("/updates/") && !getIsUrl("/") && !getIsUrl("/privacy/") && !getIsUrl("/disclaimer/") && !getIsUrl("/contact/") && <MainToc />}
+  <slot />
+</Layout>

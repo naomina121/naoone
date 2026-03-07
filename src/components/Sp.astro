@@ -1,0 +1,36 @@
+---
+const isIndex = Astro.url.pathname === "/";
+---
+<input type="checkbox" id="menu-toggle" class="hidden" />
+<label for="menu-toggle" class="sp-label cursor-pointer items-center gap-2">
+<a href="/" class="site-name text-4xl inline-block font-bold mb-4" aria-hidden="true">NAOMINA121</a>
+
+    <span>
+<img class="w-10 h-10 rounded-full" src="/images/naomina.jpg" alt="naomina121's icon" />
+<span class="text-xs sp-open">MENU</span>
+</span>
+<span class="text-4xl sp-batu">×</span>
+</label>
+<div class="sp-sidebar fixed top-0 left-0 w-64 h-full bg-[#292929] shadow-md z-50">
+    <div class="p-4">
+<a href="/" class="site-name text-4xl inline-block font-bold mb-4" aria-hidden="true">NAOMINA121</a>
+<ul class="sp-menu">
+ <li><a href="/about/" class="block py-2 px-6">当サイトについて</a></li>
+        <li>
+<p class="font-bold px-4 py-2">プロフィール</p>
+            <a href="/profile/about" class="block py-2 px-4">ナオについて</a>
+        <ul class="mb-4">
+            <li><a href="/profile/nobody-perfect" class="block py-2 px-6">完璧な人間なんていない</a></li>
+            <li><a href="/profile/nao-analysis" class="block py-2 px-6">ナオの分析結果</a></li>
+        </ul></li>
+        <li>
+            <p class="font-bold px-4 py-2">メインコンテンツ</p>
+        <li><a href="/nao/" class="block py-2 px-4">ナオのブログ</a></li>
+        <li><a href="/one/" class="block py-2 px-4">ONEのブログ</a></li>
+        <li><a href="/materials/materials-entrance" class="block py-2 px-4">資料室</a></li>
+        <li><a href="/links/" class="block py-2 px-4">リンク集</a></li>
+        </ul>
+    </div>
+
+
+</div>

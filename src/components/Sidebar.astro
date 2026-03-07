@@ -1,0 +1,38 @@
+---
+const isIndex = Astro.url.pathname === "/";
+const isProfile = Astro.url.pathname.startsWith("/profile/");
+const isAbout = Astro.url.pathname.startsWith("/profile/about");
+const isAboutIndex = Astro.url.pathname === "/about/";
+const isAboutPage = Astro.url.pathname.startsWith("/about/");
+const currentPath = Astro.url.pathname;
+const isNobodyPerfect = Astro.url.pathname.startsWith("/profile/nobody-perfect");
+const isNaoAnalysis = Astro.url.pathname.startsWith("/profile/nao-analysis");
+import Toc from '@components/Toc.astro';
+---
+<aside class="sidebar w-[250px] mt-0 pr-8">
+<a href="/"><img class="site-logo" src="/images/naomina.jpg" alt="naomina121のアイコン" />
+<p class="site-name">NAOMINA121</p>
+</a>
+
+<nav>
+    <ul class="nav-links">
+            {isAboutIndex && (<li><span class="current">当サイトについて</span></li>)}
+            {!isAboutIndex && (<li><a href="/about/">当サイトについて</a></li>)}
+        <li><a href="/profile/about">プロフィール</a>
+{isProfile && (<ul class="profile-submenu ml-4 mt-2">
+    {isAbout && (<li><span class="current">私について</span></li>)}
+    {!isAbout && (<li><a href="/profile/about">私について</a></li>)}
+    {isNobodyPerfect && (<li><span class="current">完璧な人間なんていない</span></li>)}
+    {!isNobodyPerfect && (<li><a href="/profile/nobody-perfect">完璧な人間なんていない</a></li>)}
+    </ul>)}
+        </li>
+        <li><a href="/nao/">ナオのブログ</a></li>
+        <li><a href="/one/">ONEのブログ</a></li>
+        <li><a href="/materials/materials-entrance/">資料室</a></li>
+        <li><a href="/links/">リンク集</a></li>
+    </ul>
+</nav>
+{!isIndex && (
+  <Toc />
+)}
+</aside>

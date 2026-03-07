@@ -1,0 +1,15 @@
+---
+const pageTitle = "404 Not Found";
+import PageLayout from '../layouts/PageLayout.astro';
+const description = "お探しのページは存在しないか、移動した可能性があります。";
+---
+
+<PageLayout {...Astro.props} pageTitle={pageTitle} description={description}>
+    <div class="content">
+        <p>お探しのページは存在しないか、移動した可能性があります。</p>
+        <p>URLをご確認の上、再度アクセスしてください。</p>
+        <p>ホームページに戻るには、以下のリンクをクリックしてください。</p>
+        <p>当サイトについては、<a href="/about/">こちら</a>をご覧ください。</p>
+    </div>
+        <a href="/" class="inline-block mt-6 px-6 py-3 bg-gray-700 hover:bg-gray-600 text-white transition-colors">ホームに戻る</a>
+</PageLayout>

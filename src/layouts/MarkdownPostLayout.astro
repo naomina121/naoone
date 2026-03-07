@@ -1,0 +1,52 @@
+---
+import Layout from "./Layout.astro";
+import References from '@components/References.astro';
+import Sns from '@components/Sns.astro';
+function getIsUrl(pathname) {
+  return Astro.url.pathname === pathname;
+}
+
+function getIsUrlStartsWith(pathnameStart) {
+  return Astro.url.pathname.startsWith(pathnameStart);
+}
+const { frontmatter } = Astro.props;
+const siteUrl = Astro.site?.toString().replace(/\/$/, "") ?? "";
+const url = new URL(Astro.url.pathname, siteUrl);
+const enURL = new URL(Astro.url.pathname, 'https://en.naomina121.com');
+---
+
+<Layout frontmatter={frontmatter}>
+    <h1>{frontmatter.pageTitle}</h1>
+<ul class="tags mb-0 flex flex-wrap gap-2 my-0 w-full justify-end">
+  {frontmatter.tags.map((item: string) => (
+    <li>
+      <a class="tag" href={`/tags/${item}`}>#{item}</a>
+    </li>
+  ))}
+
+  <li class="mb-2 text-sm">
+    📰作成日: <time datetime={`${frontmatter.pubDate}T00:00:00+09:00`}>{frontmatter.pubDate.toString().slice(0,10)}</time>
+  </li>
+
+  {frontmatter.modDate && (
+    <li class="mb-2 text-sm">
+      ✏️最終更新日: <time datetime={`${frontmatter.modDate}T00:00:00+09:00`}>{frontmatter.modDate.toString().slice(0,10)}</time>
+    </li>
+  )}
+</ul>
+    <p class="mt-0 mb-6 text-right text-sm">📖著者: {frontmatter.author}</p>
+    {frontmatter.image ? <img src={frontmatter.image.url} class="w-full max-w-[820px] max-h-[500px] object-cover mb-5" alt={frontmatter.image.alt} /> : null}
+    <div class="timeCount my-6">
+    <span class="timeCountTitle">
+    📖 読了時間目安：
+    </span>
+    <span class="timeCountSpan">
+        この記事は読むのに約 <span class="bold">{frontmatter.minutesRead}</span> かかります。
+    </span>
+    </div>
+    <slot />
+    {frontmatter.referrals && <References references={frontmatter.referrals} />}
+    {!getIsUrlStartsWith("/materials/") &&  !getIsUrlStartsWith("/secret/")  && (
+    <Sns frontmatter={frontmatter} url={url} />
+    )}
+</Layout>

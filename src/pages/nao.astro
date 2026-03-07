@@ -1,0 +1,24 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+const pageTitle = "ナオのブログ";
+const pubDate = "2025-03-07";
+const modDate = null;
+const image = {
+    url: '/images/blog.jpg',
+    alt: 'ナオのブログのイメージ画像',
+};
+const description = "こちらは、ナオの考えをまとめた専用ブログです。思い浮かんだことを自由に書いていきます。";
+---
+
+<PageLayout pageTitle={pageTitle} pubDate={pubDate} modDate={modDate} image={image} description={description}>
+<h2>概要</h2>
+<p>こちらは、基本人格のナオ専用のブログです。<br>
+私自身の考えや考察についてまとめていきます。</p>
+<p><a href="https://www.youtube.com/@naoone2026" target="_blank">ポッドキャスト</a>で話せなかったことなどを記録していきます。</p>
+<h2>記事</h2>
+<h3>DID</h3>
+<span>タグ：<a href="/tags/DID" class="link">DID</a></span>
+<ul class="menu-list">
+<li><a href="/nao/did-ep1">35年生きて、交代人格の存在に気が付いたお話</a></li>
+</ul>
+</PageLayout>

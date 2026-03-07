@@ -1,0 +1,79 @@
+---
+const { items } = Astro.props;
+const breadcrumbSchema = {
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": items.map((item, index) => {
+    return {
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": item.name,
+      "item": item.item
+    };
+  })
+};
+const isHome = items.length === 1;
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+{!isHome && (
+<nav aria-label="Breadcrumb" class="border-t breadcrumbs border-[#3c3c3c]">
+  <ol>
+    {items.map((item, index) => (
+      <li>
+        {index < items.length - 1 ? (
+          <a href={item.item}>{item.name}</a>
+        ) : (
+          <span>{item.name}</span>
+        )}
+        {index < items.length - 1 && " > "}
+      </li>
+    ))}
+  </ol>
+</nav>
+)}
+
+<style>
+    @import "tailwindcss";
+    .breadcrumbs{
+    background:#2f2f2f;
+    padding:8px 16px;
+    box-shadow:0 2px 4px 0 rgba(0,0,0,0.2);
+
+    }
+   .breadcrumbs ol {
+    @apply max-w-6xl px-4 text-sm;
+    margin:0 auto;
+    display: flex;
+    list-style: none;
+  }
+  .breadcrumbs ol li {
+    margin-right: 8px;
+  }
+    .breadcrumbs ol li a {
+        color: #aaa96a;
+        margin-right: 8px;
+        display:inline-block;
+        text-decoration: none;
+        transition: color 0.3s;
+        font-weight:600;
+    }
+    .breadcrumbs ol li a:hover {
+        color: #edf5a9;
+    }
+    @media (max-width: 768px) {
+      .breadcrumbs ol {
+        padding: 6px 12px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        overflow-x: auto;
+      }
+      .breadcrumbs ol li span, .breadcrumbs ol li a {
+        font-size:14px;
+      }
+      .breadcrumbs ::-webkit-scrollbar {
+        height: 1px;
+      }
+    }
+</style>

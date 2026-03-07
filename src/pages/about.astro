@@ -1,0 +1,60 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+const pageTitle = "当サイトについて";
+const pubDate = "2026-03-07";
+const modDate = null;
+const image = {
+    url: '/images/about.jpg',
+    alt: '運営情報のイメージ画像',
+};
+const description = "当サイトの運営方針やコンセプトについて説明しています。";
+---
+
+<PageLayout pageTitle={pageTitle} pubDate={pubDate} modDate={modDate} image={image} description={description}>
+<h2>概要</h2>
+<p>
+  当サイトは、ナオと交代人格のoneによる公式のブログを目的として作っています。
+</p>
+<p>
+  このページでは運営方針を共有し、当サイトのコンセプトを共有します。<br>
+  私やoneに関しては、<a href="/profile/about/" class="link">私について</a>をご確認ください。
+</p>
+
+<h2>運営方針</h2>
+<p class="note">
+  <small>※ 運営方針は適宜変わる可能性があります。</small>
+</p>
+<p>こちらに、運営方針の記事をまとめて載せています。<u class="gold">各項目ごとに分かりやすく説明を追加しております。</u></p>
+<ul class="policy-list">
+  <li class="policy-item">
+    <h3 class="policy-title">
+    <span class="policy-hub-link">
+ブログを作成する目的とは？
+    </span>
+    </h3>
+    <div class="policy-desc">
+    <p>
+DID（解離性同一性障害）の診断を受けたことによる、<u class="policy-mark">日常の経過記録をするためです。</u>
+などといつつ、私はブログを楽しみたいのです。ただそれだけなのです。(byナオ)
+    </p>
+    </div>
+  </li>
+
+  <li class="policy-item">
+    <h3 class="policy-title">
+    <span class="policy-hub-link">
+      広告を置かない・収益を目的にしない理由
+    </span>
+    </h3>
+     <div class="policy-desc">
+    <p>
+      <u class="policy-mark">当サイトは、収益性を求めず、非営利目的で運営しているためです。</u>
+      また、広告を置いてないほうが読みやすいかと思うこと、デザインを損ねたくないという理由もありますし、もうマストドンも同じデザインなので、変えるのが面倒なのです。
+    </p>
+  </div>
+  </li>
+
+</ul>
+<p>追加することがたった、二件だったとは…（byOne）</p>
+<p>これからきっと増えてきます…（byナオ）</p>
+</PageLayout>

@@ -1,0 +1,95 @@
+---
+---
+<nav class="toc-nav">
+    <div class="toc-container">
+  <div class="toc-title">
+    <p>TOC</p>
+  </div>
+  <div class="toc"></div>
+  </div>
+</nav>
+
+<script>
+  import * as tocbot from 'tocbot'
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    const h2s = document.querySelectorAll('#article-body h2');
+if(h2s.length === 0) {
+    document.querySelector('.toc-nav').style.display = 'none';
+    return;
+}
+    const h3s = document.querySelectorAll('#article-body h3');
+    let h2Count = 1;
+    let h3Count = 1;
+
+    h2s.forEach(h2 => {
+        if(h2.id == null){
+        h2.id = 'section-' + h2Count;
+        h2Count++;
+        }
+    });
+
+    h3s.forEach(h3 => {
+        if(h3.id == null){
+        h3.id = 'subsection-' + h3Count;
+        h3Count++;
+        }
+    });
+
+    tocbot.init({
+    tocSelector: '.toc',
+    contentSelector: '#article-body',
+    activeLinkClass: 'is-active',
+    listClass: 'toc-list',
+    linkClass: 'toc-link',
+    headingSelector: 'h2, h3',
+    ignoreSelector: '.js-toc-ignore',
+  });
+});
+</script>
+
+<style>
+.toc-nav {
+    background-color: #232323;
+    border-radius: 3px;
+    padding: 16px;
+    font-size:14px;
+    line-height:2;
+    margin:20px 0;
+    position: sticky;
+    top: 25px;
+    border: 1px solid #414141;
+    overflow-y:scroll;
+    overflow-x:hidden;
+    max-height:400px;
+}
+
+    .toc-title p {
+        color: #a0a0a0;
+        font-size: 16px;
+        border-bottom:1px solid #727272;
+        margin:0 0 10px 0;
+        padding:12px;
+    }
+
+    .toc-list {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .toc-link {
+        color: #999;
+        text-decoration: none;
+        display: block;
+        padding: 4px 0;
+        transition: color 0.3s;
+    }
+    :global(.toc-link:hover) {
+        color: #f9f9f9;
+    }
+
+    :global(.toc-link.is-active) {
+        font-weight: bold;
+        color: #aca034;
+    }
+</style>

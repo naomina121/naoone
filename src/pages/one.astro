@@ -1,0 +1,25 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+const pageTitle = "ONEのブログ";
+const pubDate = "2026-03-07";
+const modDate = null
+const image = {
+    url: '/images/blog2.jpg',
+    alt: 'oenのブログのイメージ画像',
+};
+const description = "ナオの交代人格のone専用のブログです";
+---
+
+<PageLayout pageTitle={pageTitle} pubDate={pubDate} modDate={modDate} image={image} description={description}>
+<h2>概要</h2>
+<p>交代人格のone専用のブログです。<br>
+<a href="https://www.youtube.com/@naoone2026" target="_blank">ポッドキャスト</a>で話せなかったことなどを記録していきます。
+
+
+    <h2>記事</h2>
+<h3>DID</h3>
+<span>タグ：<a href="/tags/DID" class="link">DID</a></span>
+<ul class="menu-list">
+<li><a href="/one/did-ep1">交代人格は自分の人生を生きれるのか？</a></li>
+</ul>
+</PageLayout>

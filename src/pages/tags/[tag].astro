@@ -1,0 +1,32 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+const filteredPosts = posts.filter((post) => post.frontmatter.tags?.includes(tag));
+export async function getStaticPaths() {
+  const allPosts = Object.values(import.meta.glob('../*/*.mdx', { eager: true }));
+  const uniqueTags = [...new Set(allPosts.map((post: any) => post.frontmatter.tags).flat())];
+return uniqueTags.map((tag) => {
+    const filteredPosts = allPosts.filter((post: any) => post.frontmatter.tags.includes(tag));
+    return {
+        params: { tag },
+        props: { posts: filteredPosts },
+    };
+    });
+}
+const pageTitle = `タグ: ${tag}`;
+const description = `${tag}のタグが付いた記事一覧ページです。`;
+---
+<PageLayout pageTitle={pageTitle} description={description}>
+  <p class="mb-6">{tag}のタグが付いた記事です。</p>
+  <ul>
+    {filteredPosts.map((post: any) => <li class="list-disc ml-6 mb-2"><time class="orange" datetime={post.frontmatter.modDate
+    ? new Date(post.frontmatter.modDate).toISOString()
+    : new Date(post.frontmatter.pubDate).toISOString()}>{post.frontmatter.modDate
+    ? post.frontmatter.modDate.slice(0, 10)
+    : post.frontmatter.pubDate.slice(0, 10)
+    }</time> <a href={post.url}>{post.frontmatter.pageTitle}</a></li>)}
+  </ul>
+              <a href="/" class="inline-block mt-6 px-6 py-3 bg-gray-700 hover:bg-gray-600 text-white transition-colors">ホームに戻る</a>
+
+</PageLayout>

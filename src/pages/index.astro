@@ -1,0 +1,129 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import { siteUpdates } from "../data/update";
+const pageTitle = "NAOMINA121";
+const update = siteUpdates;
+const pubDate = "2026-03-07";
+const modDate = null;
+const image = {
+    url: '/images/naoone.jpg',
+    alt: 'ナオとoneの公式サイトのイメージ画像',
+};
+const description = "ナオの公式サイトです。メンタルヘルスと情報リテラシー、ブログなど、ナオの様々なコンテンツを発信しています。";
+---
+
+<PageLayout pageTitle={pageTitle} pubDate={pubDate} modDate={modDate} image={image} description={description}>
+<h2>はじめに</h2>
+<p>このサイトは、<a href="/profile/about" class="link">ナオとONE</a>が運営するナオとONEの公式サイトです。</p>
+<h2>発信コンテンツ</h2>
+
+<p>サイト内にあるコンテンツについて紹介していきます。</p>
+
+<table class="m">
+<thead>
+<tr>
+<th>項目</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/about" class="link">当サイトについて</a></td>
+<td>運営方針やサイトの目的について説明しています。</td>
+</tr>
+<tr>
+<td><a href="/profile/about" class="link">プロフィール</a></td>
+<td>ナオとoneの基本情報です</td>
+</tr>
+<tr>
+<td><a href="/nao" class="link">ナオのブログ</a></td>
+<td>ナオのブログです。</td>
+</tr>
+<tr>
+<td><a href="/one" class="link">ONEのブログ</a></td>
+<td>ONEのブログです。</td>
+</tr>
+<tr>
+<td><a href="/materials/materials-entrance" class="link">資料室</a></td>
+<td>ナオのセンシティブな記録です。</td>
+</tr>
+<tr>
+<td><a href="/links" class="link">リンク集</a></td>
+<td>関連する外部リンク集です</td>
+</tr>
+</tbody>
+</table>
+
+<h2>お知らせ</h2>
+<div class="box">
+  <h3 style="font-size:18px; border-bottom:1px solid #727272; margin:0 0 10px 0px; padding: 0px 0px 10px;">
+    📰更新履歴
+  </h3>
+  <p>更新情報は、<a class="link" target="_blank" rel="me" href="https://mastodon.naomina121.com/@notice">Mastodon</a>でもご確認できます。</p>
+  <p>無理のない更新頻度を目指しているため、記事の更新ペースは、<u class="orange">月に一回の頻度</u>を目指しています。</p>
+{update.map((update) => {
+      return update.category==="Policy" && (
+  <p class="mt-2 font-semibold" style="color:#c02b2b; font-weight:500; padding-top:10px; margin-top:10px; border-top:1px solid #727272">重要事項の更新履歴</p>
+
+    )
+    }).filter(Boolean).slice(0, 1)}
+
+  <ul style="font-weight:500;">
+    {update.map((update) => {
+      return update.category==="Policy" && (
+      <li class="my-1">
+        <time style="color:#ff9a4b;" class="text-sm" datetime={`${update.date}T00:00:00+09:00`}>{update.date}</time>
+        {' : '}
+        <a href={`/updates/${update.slug}`} class="text-[#c9c9c9] hover:underline hover:underline-offset-4">
+          {update.title}
+        </a>
+      </li>
+    )
+    }).filter(Boolean).slice(0, 1)}
+  </ul>
+    {update.map((update) => {
+      return update.category==="Technical" && (
+   <p class="mt-2 font-semibold" style="color:#ceb300; font-weight:500; padding-top:10px; margin-top:10px; border-top:1px solid #727272">サイトの更新履歴</p>
+    )
+    }).filter(Boolean).slice(0, 1)}
+
+  <ul style="font-weight:500;">
+    {update.map((update) => {
+      return update.category==="Technical" && (
+      <li class="my-1">
+        <time style="color:#ff9a4b;" class="text-sm" datetime={`${update.date}T00:00:00+09:00`}>{update.date}</time>
+        {' : '}
+        <a href={`/updates/${update.slug}`} class="text-[#c9c9c9] hover:underline hover:underline-offset-4">
+          {update.title}
+        </a>
+      </li>
+    )
+    }).filter(Boolean).slice(0, 1)}
+  </ul>
+
+    {update.map((update) => {
+      return update.category==="Article" && (
+  <p class="mt-2 font-semibold" style="font-weight:500; color:#cdcdcd; padding-top:10px; margin-top:10px; border-top:1px solid #727272">記事の更新履歴</p>
+
+      )
+    }).filter(Boolean).slice(0, 1)}
+
+
+  <ul style="font-weight:500;">
+    {update.map((update) => {
+      return update.category==="Article" && (
+      <li class="my-1">
+        <time style="color:#ff9a4b;" class="font-weight:500; text-sm" datetime={`${update.date}T00:00:00+09:00`}>{update.date}</time>
+        {' : '}
+        <a href={`/updates/${update.slug}`} class="text-[#c9c9c9] hover:underline hover:underline-offset-4">
+          {update.title}
+        </a>
+      </li>
+    )
+    }).filter(Boolean).slice(0, 1)}
+  </ul>
+  <p style="margin-top:10px; text-align:right;">
+    <a href="/updates/" style="font-weight:100;" class="gold underline hover:text-[#fff]">→ お知らせ一覧を見る</a>
+  </p>
+</div>
+</PageLayout>

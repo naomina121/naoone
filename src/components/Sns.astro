@@ -1,0 +1,221 @@
+---
+const { frontmatter, url } = Astro.props;
+const Url = url.toString();
+const Title = frontmatter.pageTitle;
+---
+
+<section class="sns-share-section">
+<h2>この記事をシェアする</h2>
+<p>この記事の内容が良かったら是非、シェアしてください。</p>
+<div id="social-platforms">
+<a class="btn btn-icon btn-facebook" href=`http://www.facebook.com/share.php?u=${Url}` rel="nofollow noopener" target="_blank"><i class="fa-brands fa-facebook-f"></i><span>Facebook</span></a>
+<a class="btn btn-icon btn-x" href=`https://twitter.com/intent/tweet?url=${Url}&text=${Title}&via=naomina121` rel="nofollow noopener" target="_blank"><i class="fa-brands fa-x-twitter"></i><span><i class="fa-brands fa-x-twitter"></i></span></a>
+<a class="btn btn-icon btn-pocket" href=`http://getpocket.com/edit?url=${Url}` rel="nofollow noopener" target="_blank"><i class="fa-brands fa-get-pocket"></i><span>Pocket</span></a>
+<a class="btn btn-icon btn-line" href=`http://line.me/R/msg/text/?${Url}%0a${Title}` target="_blank" rel="nofollow noopener"><i class="fa-solid fa-phone"></i><span>Line</span></a>
+<a class="btn btn-icon btn-hatena" href=`http://b.hatena.ne.jp/add?mode=confirm&url=${Url}&title=${Title}` rel="nofollow" rel="nofollow" target="_blank"><i class="fa-solid fa-question"></i><span>B!</span></a>
+</div>
+
+<button id="copyUrlBtn">記事のURLをコピー</button>
+<input type="hidden" id="articleUrl" value={`${Url}`}>
+</section>
+
+<style>
+/*@import url(//maxcdn.bootstrapcdn.com/font-awesome/7.0.0/css/font-awesome.min.css);*/
+
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css);
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
+
+.sns-share-section {
+  margin-top: 40px;
+  text-align: center;
+  margin-bottom:40px;
+}
+
+#social-platforms {
+  position:relative;
+  top:10px;
+  margin-top:30px;
+  font-size:1rem;text-align:center;
+  height:auto;
+  width:100%;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+  overflow:hidden;
+}
+
+/*Pen code from this point on*/
+.btn {
+  clear:both;
+  white-space:nowrap;
+  font-size:14px;
+  font-family:'Roboto',sans-serif;
+  display:inline-block;
+  width:auto;
+  cursor:pointer;
+  border-radius:5px;
+  border:3px solid #222;
+  box-shadow:0 3px 10px 0 rgba(0,0,0,0.4);
+  text-decoration:none;
+  margin:2px;
+  -webkit-transition:all .5s;
+  -moz-transition:all .5s;
+  transition:all .5s;
+  overflow:hidden
+}
+
+.btn:hover {
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.45);
+}
+
+.btn:focus {
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.4);
+}
+
+.btn > span,.btn-icon > i {
+  padding:0px;
+  -webkit-transition:all .5s;
+  -moz-transition:all .5s;
+  transition:all .5s;
+  line-height:1em;
+  width:100%;
+  font-size:16px;
+  box-sizing:border-box;
+}
+
+.btn > span {
+    background: #b8b8b8;
+    color: #fff;
+    display: inline-block;
+    padding: 16px 27px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.btn:focus > span {
+  background:#9a9a9a
+}
+
+.btn-icon > i {
+  border-radius:5px 0 0 5px;
+  position:relative;
+  text-align:center;
+  width:40px;
+  font-size:16px;
+  color:#fff;
+}
+
+.btn-icon > i:after {
+  content:"";
+  border:8px solid;
+  border-color:transparent transparent transparent #222;
+  position:absolute;
+  top:3px;
+  right:-15px
+}
+
+.btn-icon:hover > i,.btn-icon:focus > i {
+  color:#FFF
+}
+
+.btn-icon > span {
+  border-radius:0 5px 5px 0
+}
+
+/*Facebook*/
+.btn-facebook:hover > i,.btn-facebook:focus > i {
+  color:#23365d;
+}
+
+.btn-facebook > span {
+  background:#23365d;
+}
+
+/*x*/
+.btn-x:hover > i,.btn-x:focus > i {
+  color:#74590d;
+}
+
+.btn-x > span {
+  background:#74590d;
+}
+
+/*Line*/
+.btn-line:hover > i,.btn-line:focus > i {
+  color:#106253;
+}
+
+.btn-line > span {
+  background:#106253;
+}
+
+/*hatena*/
+.btn-hatena:hover > i,.btn-hatena:focus > i {
+  color:#154966;
+}
+
+.btn-hatena > span {
+  background:#154966;
+}
+
+/*pocket*/
+.btn-pocket:hover > i,.btn-pocket:focus > i {
+  color:#6a252a;
+}
+
+.btn-pocket > span {
+  background:#6a252a;
+}
+
+#copyUrlBtn {
+    display: inline-block;
+    width:100%;
+    padding: 10px 20px;
+    background-color: #154966;
+    border:3px solid #222;
+    box-shadow:0 3px 10px 0 rgba(0,0,0,0.4);
+    color: white;
+    margin-top:30px;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#copyUrlBtn:hover {
+    background-color: #154966;
+}
+
+#copyUrlBtn:active {
+    background-color: #0f384eff;
+}
+
+@media (max-width: 768px) {
+    #social-platforms {
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    }
+}
+</style>
+
+<script is:inline>
+    document.addEventListener('DOMContentLoaded', function() {
+    const copyBtn = document.getElementById('copyUrlBtn');
+    const urlInput = document.getElementById('articleUrl');
+
+    urlInput.value = urlInput.value || window.location.href;
+
+    copyBtn.addEventListener('click', function() {
+        const urlToCopy = urlInput.value;
+        navigator.clipboard.writeText(urlToCopy)
+            .then(() => {
+                copyBtn.textContent = 'コピーしました！';
+                setTimeout(() => {
+                    copyBtn.textContent = 'URLをコピー';
+                }, 2000);
+            })
+            .catch(err => {
+                console.error('URLのコピーに失敗しました:', err);
+                });
+    });
+});
+</script>

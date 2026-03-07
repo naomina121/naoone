@@ -1,0 +1,50 @@
+---
+---
+<h2 class="js-toc-ignore">目次</h2>
+<nav class="toc-nav-main">
+    <details class="toc-container">
+  <summary class="toc-title">
+    <span class="cursor-pointer">📖この記事の内容</span>
+  </summary>
+  <div class="toc-main"></div>
+  </details>
+</nav>
+
+<script>
+  import * as tocbot from 'tocbot'
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    const h2s = document.querySelectorAll('#article-body h2');
+if(h2s.length === 0) {
+    document.querySelector('.toc-nav-main').style.display = 'none';
+    return;
+}
+    const h3s = document.querySelectorAll('#article-body h3');
+    let h2Count = 1;
+    let h3Count = 1;
+
+
+    h2s.forEach(h2 => {
+        if(h2.id == null){
+        h2.id = 'section-' + h2Count;
+        h2Count++;
+        }
+    });
+
+    h3s.forEach(h3 => {
+        if(h3.id == null){
+        h3.id = 'subsection-' + h3Count;
+        h3Count++;
+        }
+    });
+      tocbot.init({
+    tocSelector: '.toc-main',
+    contentSelector: '#article-body',
+    activeLinkClass: 'is-active',
+    listClass: 'toc-list',
+    linkClass: 'toc-link',
+    headingSelector: 'h2, h3',
+    ignoreSelector: '.js-toc-ignore',
+  });
+});
+</script>

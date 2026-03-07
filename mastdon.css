@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Castoro+Titling&family=Zen+Old+Mincho&display=swap');
+body{
+  font-family: "Zen Old Mincho", serif;
+}
+:root {
+  font-family: "Zen Old Mincho", serif;
+    --dropdown-border-color: #363636;
+    --dropdown-background-color: rgba(24, 24, 33, .9);
+    --dropdown-shadow: 0 20px 25px -5px rgba(0, 0, 0, .25), 0 8px 10px -6px rgba(0, 0, 0, .25);
+    --modal-background-color: rgba(24, 24, 33, .7);
+    --modal-background-variant-color: rgba(41, 41, 56, .7);
+    --modal-border-color: #363636;
+    --background-border-color: #363636;
+    --background-filter: blur(10px) saturate(180%) contrast(75%) brightness(70%);
+    --background-color: #292929;
+    --background-color-tint: rgba(24, 24, 33, .9);
+    --surface-background-color: #20202c;
+    --surface-variant-background-color: #292938;
+    --surface-variant-active-background-color: #313144;
+    --on-surface-color: rgba(41, 41, 56, .5);
+    --avatar-border-radius: 8px;
+    --media-outline-color: rgba(252, 248, 255, .15);
+    --overlay-icon-shadow: drop-shadow(0 0 8px rgba(0, 0, 0, .25));
+    --error-background-color: #b01d35;
+    --error-active-background-color: #c1203b;
+    --on-error-color: #fff;
+}
+
+.columns-area__panels__main,.tabs-bar__wrapper {
+   background: #1e1e1e;
+}
+
+.button{
+background:#483976;
+}
+
+.button.button-tertiary {
+    border: 1px solid #483976;
+    color: #ab94f2;
+}
+
+button:active, .button:focus, .button:hover {
+    background-color: #483976;
+}
+
+.search__input {
+    background: #1e1e1e;
+}
+
+.button.button-tertiary:active, .button.button-tertiary:focus, .button.button-tertiary:hover {
+    background-color: #483976;
+}
+
+.search__popout h4 {
+    color: #cacace;
+}
+
+.check-box__input.checked, .check-box__input.indeterminate, .radio-button__input.checked, .radio-button__input.indeterminate {
+    border-color: #483976;
+}
+.radio-button__input.checked:before {
+    background: #6955a5;
+}
+
+.account__domain-pill {
+    background: rgb(72 57 118);
+    color: #c4c1cc;
+}
+.search__popout {
+    background: #1e1e1e;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #89721b;
+}
+
+.column-back-button {
+    color: #e4cc82;
+}
+
+.account-role {
+    border: 1px solid #483976;
+    color: #a384ff;
+}
+
+.account__header__bio .account__header__fields a {
+    color: #d8b853;
+}
+
+.server-banner__introduction {
+    color: #a0a0a0;
+    font-size: 11px;
+}
+
+.server-banner__description {
+    color: #a5a5ac;
+}
+
+.link-footer p {
+    color: #919198;
+ }
+
+.link-footer p a {
+    color: #8c8cc0;
+}
+
+.about__section__title{
+color:#8c8cc0;
+}
+
+.about__footer {
+    color: #b6b6c0;
+}
+
+.account__header__bio .account__header__fields dt{
+color:#fff;
+}
+
+.account__header__bio .account__header__fields dd {
+    color: #d8b853;
+}
+
+.status__relative-time {
+    color: #999999;
+}
+
+.icon path {
+    fill: #625532;
+}
+
+.account__header__bio .account__header__fields .verified dt, .account__header__bio .account__header__fields .verified dd{
+    color:#ffffff;
+    font-weight:400;
+}
+
+.account__header__bio .account__header__fields  dl:first-child{
+    background:#30294a;
+    border-left:8px solid #5d4f86;
+    border-bottom:none;
+    margin-bottom:10px;
+}
+
+.account__header__bio .account__header__fields .verified,.account__header__bio .account__header__fields .verified:last-child{
+    border:none;
+    border-left:8px solid #3c666f;
+    background:#1b383f;
+    border-radius:0;
+}
+
+.account__header__bio .account__header__fields{
+    border-radius:0px;
+    border:none;
+    }
+
+.account__header__bio .account__header__fields  dl dt{
+    color:#ffffff;
+    font-weight:400;
+}
+
+.account__header__bio .account__header__fields  dl dd{
+    color:#c7a954;
+    font-weight:600;
+}
+
+.account__header__bio .account__header__fields .verified dd a, .account__header__bio .account__header__fields .verified dd a{
+    color: #c7a954;
+    font-weight:400;
+}
+
+.verified .icon path{
+    fill: #ad9952;
+}
+
+.account__section-headline a.active:before, .account__section-headline button.active:before, .notification__filter-bar a.active:before, .notification__filter-bar button.active:before {
+    background: #483976;
+}
+
+.button.button-secondary {
+        color: #8c7b4c;
+        border: 1px solid rgb(54 54 54);
+}
+.button.button-secondary:active, .button.button-secondary:focus, .button.button-secondary:hover{
+color:#c9b680;
+border: 1px solid rgb(88 87 87);
+}
+.icon-button{
+color:#d8d8d9;
+}
+
+.status__info .status__display-name .display-name__account{
+    color: #99813d;
+}
+
+.server-banner h4 {
+    color: #acacac;
+}
+
+}
+
+.simple_form .block-button, .simple_form .button, .simple_form button {
+    background: #483976;
+}
+
+.rules-list li:before {
+    background: #756818;
+}
+
+.rules-list li:before {
+    align-items: center;
+    background: #756818;
+}
+
+.simple_form .block-button, .simple_form .button, .simple_form button {
+    background: #1f5760;
+}
+
+.account__header__tabs__name h1 small {
+    color: #b39b5a;
+}
+
+
+.sign-in-banner p {
+    color: #96969c;
+}
+
+.compose-form__highlightable {
+    background: #1e1e1e;
+}
+
+.compose-form .autosuggest-textarea__textarea, .compose-form .spoiler-input__input {
+    background: #373737;
+
+}
+
+.dropdown-button {
+    border: 1px solid #8c773a;
+    color: #9b843e;
+}
+
+.navigation-bar .account__display-name .display-name__account{
+color: #ba9b36;
+}
+
+.button:active, .button:focus, .button:hover {
+    background-color: #525281;
+}
+
+.column-link.active {
+    color: #ba9b36;
+}
+
+.account__avatar, .account__avatar img{
+border-radius:0px;}
+
+.edit-indicator__content p, .reply-indicator__content p, .status__content p{font-size:14px;color:#dddddd;line-height: 1.8;}
+.icon-button{
+color:#a9a9a9;}
+
+.status__info .status__display-name .display-name__account{
+color:#9e8b4d;}
+
+button.status__action-bar__button.star-icon.icon-button.icon-button--with-counter {
+    display: none;
+}
+
+.status__action-bar__button-wrapper:nth-child(3) {
+    display: none;
+}
+
+.account__header__extra__links a:not(:first-child) {
+    display: none;
+}
+
+.account__header__content p {
+    margin-bottom: 10px;
+    line-height: 1.8;
+    color: #e5e5e5;
+}
+
+.account__header__content a{
+color:#c0a268;
+    text-decoration:none;
+font-weight:100;
+}
+
+.account__header__content a:hover{
+    text-decoration:underline;
+    color:#ecd6aa;
+}
+
+::selection {
+  background: #6d6026;
+  color: #fff;
+}
+
+/* 全体の太さ */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* 背景部分 */
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+/* つまみ部分 */
+::-webkit-scrollbar-thumb {
+  background: #6d6026;
+  border-radius: 10px;
+}
+
+/* ホバー時に濃くするなど */
+::-webkit-scrollbar-thumb:hover {
+  background: #6d6026;
+}
+
+.account__header__image{
+height:200px;
+}
+
+
+.column-link--logo,
+.ui__header__logo {
+  position: relative;
+  height:50px;
+}
+
+.column-link--logo::before,
+.ui__header__logo::before {
+  content: "NAOMINA121";
+  position: absolute;
+  left:15px;
+  top: 70%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  line-height: 1;
+  font-size: 27px;
+  display:inline-block;
+  padding:5px 0 10px 10px;
+  font-family: "Castoro Titling", serif;
+  font-weight: 900;
+  border-left: 6px solid #642828;
+  background: linear-gradient(0deg, #ffffff 0%, #f5f0dc 35%, #ad9434 65%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.logo {
+  visibility: hidden;
+}
+
+.tabs-bar__wrapper{
+padding-top:0px;
+}
+
+
