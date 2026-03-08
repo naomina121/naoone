@@ -25,7 +25,7 @@ const titleTag = isHome ? "NAOMINA121" : frontmatter ? frontmatter.pageTitle + "
 const mainId = isHome ? "main-body" : "article-body";
 const isImage = frontmatter ? frontmatter.image ? true : false : image ? true : false;
 const postTitle = frontmatter ? frontmatter.pageTitle  ? frontmatter.pageTitle : pageTitle ? pageTitle : "" : pageTitle ? pageTitle : "";
-const ogpImageURL = frontmatter ? frontmatter.image ? new URL(frontmatter.image, siteUrl) : image? image: new URL('/images/nao2.jpg', siteUrl) : image ? new URL(image, siteUrl) : new URL('/images/nao2.jpg', siteUrl);
+const ogpImageURL = frontmatter ? frontmatter.image ? new URL(frontmatter.image, siteUrl) : image? image: new URL('/images/naoone.jpg', siteUrl) : image ? new URL(image, siteUrl) : new URL('/images/naoone.jpg', siteUrl);
 const ga4TrackingId = 'G-VGYCVR3R5F';
 const ga4TrackingCode = `
 <script async src="https://www.googletagmanager.com/gtag/js?id=${ga4TrackingId}"></script>
@@ -88,7 +88,7 @@ const infoSchema = {
         "datePublished": `${u.date}T00:00:00+09:00`,
         "dateModified": u.updatedAt ? `${u.updatedAt}T00:00:00+09:00` : `${u.date}T00:00:00+09:00`,
         "url": `${siteUrl}/updates/${u.slug}/`,
-        "image": `${siteUrl}/images/nao2.jpg`,
+        "image": `${siteUrl}/images/naoone.jpg`,
         "author": {
           "@type": "Person",
           "name": nao,
@@ -287,7 +287,7 @@ getIsUrlStartsWith("/profile/") ||
     "url": `${siteUrl}/updates/${update.slug}/`,
     "image": {
       "@type": "ImageObject",
-      "url": `${siteUrl}/images/nao2.jpg`,
+      "url": `${siteUrl}/images/naoone.jpg`,
       "width": 1200,
       "height": 630
     },
@@ -420,7 +420,7 @@ getIsUrlStartsWith("/one/") ? [
     <meta property="og:image" content={ogpImageURL.toString()} />
     }
     {!isImage &&
-    <meta property="og:image" content={new URL('/images/nao2.jpg', siteUrl).toString()} />
+    <meta property="og:image" content={new URL('/images/naoone.jpg', siteUrl).toString()} />
     }
     <meta property="og:description" content={descriptionContent} />
     <meta property="og:site_name" content="naomina121" />
@@ -433,7 +433,7 @@ getIsUrlStartsWith("/one/") ? [
     <meta name="twitter:image" content={ogpImageURL.toString()} />
     }
     {!isImage &&
-    <meta name="twitter:image" content={new URL('/images/nao2.jpg', siteUrl).toString()} />
+    <meta name="twitter:image" content={new URL('/images/naoone.jpg', siteUrl).toString()} />
     }
     {getIsUrl("/thanks/") ||  getIsUrl("/secret/") || getIsUrlStartsWith("/secret/") && <meta name="robots" content="noindex,nofollow" />}
     <link rel="sitemap" href="/sitemap-index.xml" />
