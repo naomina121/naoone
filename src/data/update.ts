@@ -1,7 +1,23 @@
 export const siteUpdates = [
   {
+    date: '2026-03-08',
+    slug: 'nao-did-ep2',
+    title: '新記事「DIDになって戸惑っていること」を公開しました',
+    content: 'DIDになって私が戸惑っていることを語りました',
+    link:'https://naomina121.com/nao/did-ep2',
+    category: 'Article'
+  },
+    {
+    date: '2026-03-08',
+    slug: 'one-did-ep2',
+    title: '新記事「交代人格が増えるとどのような危険性が増えるのか」を公開しました',
+    content: '交代人買うが増える危険性を語りました。',
+    link:'https://naomina121.com/one/did-ep2',
+    category: 'Article'
+    },
+  {
     date: '2026-03-07',
-    slug: 'vps-ghost-article-published',
+    slug: 'nao-did-ep1',
     title: '新記事「35年生きて、交代人格の存在に気が付いたお話」を公開しました',
     content: '35年目にして解離性同一性障害として交代人格さんがいる事実に気が付きましたのでそのお話を語ってみようと思います。',
     link:'https://naomina121.com/nao/did-ep1',
