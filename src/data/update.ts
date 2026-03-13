@@ -1,4 +1,20 @@
 export const siteUpdates = [
+    {
+    date: '2026-03-13',
+    slug: 'nao-did-ep3',
+    title: '新記事「離性同一性障害じゃないと証明できなかったことリスト」を公開しました',
+    content: '自分が本当にDIDなのかなって思うことを整理してみました。',
+    link:'https://naomina121.com/nao/did-ep3',
+    category: 'Article'
+  },
+    {
+    date: '2026-03-13',
+    slug: 'one-did-ep3',
+    title: '新記事「ファッションDIDの危険性」を公開しました',
+    content: 'なぜ、ファッションDIDの偽りが危険なのかを記事にしました。',
+    link:'https://naomina121.com/one/did-ep3',
+    category: 'Article'
+    },
   {
     date: '2026-03-08',
     slug: 'nao-did-ep2',
