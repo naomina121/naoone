@@ -25,7 +25,7 @@ const titleTag = isHome ? "NAOMINA121" : frontmatter ? frontmatter.pageTitle + "
 const mainId = isHome ? "main-body" : "article-body";
 const isImage = frontmatter ? frontmatter.image ? true : false : image ? true : false;
 const postTitle = frontmatter ? frontmatter.pageTitle  ? frontmatter.pageTitle : pageTitle ? pageTitle : "" : pageTitle ? pageTitle : "";
-const ogpImageURL = frontmatter ? frontmatter.image ? new URL(frontmatter.image, siteUrl) : image? image: new URL('/images/naoone.jpg', siteUrl) : image ? new URL(image, siteUrl) : new URL('/images/naoone.jpg', siteUrl);
+const ogpImageURL = frontmatter ? frontmatter.image ? new URL(frontmatter.image.url, siteUrl) : image ? new URL(image.url, siteUrl) : new URL('/images/naoone.jpg', siteUrl) : image ?  new URL(image.url, siteUrl) : new URL('/images/naoone.jpg', siteUrl) ;
 const ga4TrackingId = 'G-VGYCVR3R5F';
 const ga4TrackingCode = `
 <script async src="https://www.googletagmanager.com/gtag/js?id=${ga4TrackingId}"></script>
