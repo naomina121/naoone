@@ -1,5 +1,22 @@
 export const siteUpdates = [
     {
+    date: '2026-03-15',
+    slug: 'nao-did-ep4',
+    title: '新記事「交代人格のoneについて」を公開しました',
+    content: '交代人格のoneについてを語ってみました',
+    link:'https://naomina121.com/nao/did-ep4',
+    category: 'Article'
+  },
+    {
+    date: '2026-03-15',
+    slug: 'one-did-ep4',
+    title: '新記事「基本人格のナオについて」を公開しました',
+    content: '基本人格のナオについてを語ってみました。',
+    link:'https://naomina121.com/one/did-ep4',
+    category: 'Article'
+    },
+
+    {
     date: '2026-03-13',
     slug: 'nao-did-ep3',
     title: '新記事「離性同一性障害じゃないと証明できなかったことリスト」を公開しました',
