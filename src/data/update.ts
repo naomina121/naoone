@@ -1,5 +1,22 @@
 export const siteUpdates = [
     {
+    date: '2026-03-18',
+    slug: 'nao-did-ep5',
+    title: '新記事「私は、交代人格がいるか分からない時があります。」を公開しました',
+    content: '共意識についてナオ視点で語りました。',
+    link:'https://naomina121.com/nao/did-ep5',
+    category: 'Article'
+  },
+    {
+    date: '2026-03-18',
+    slug: 'one-did-ep5',
+    title: '新記事「共意識で交代人格の考えが分かる部分と分からない部分について」を公開しました',
+    content: '共意識についてone視点で語りました。',
+    link:'https://naomina121.com/one/did-ep5',
+    category: 'Article'
+    },
+
+    {
     date: '2026-03-15',
     slug: 'nao-did-ep4',
     title: '新記事「交代人格のoneについて」を公開しました',
