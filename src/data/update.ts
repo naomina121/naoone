@@ -1,4 +1,21 @@
 export const siteUpdates = [
+
+    {
+    date: '2026-03-23',
+    slug: 'nao-think-ep1',
+    title: '新記事「「人は一人で生きていけない」という言葉の本当の意味を知った35歳の私」を公開しました',
+    content: 'ナオ（私）の考えが変わったのでブログ記事を更新しました。',
+    link:'https://naomina121.com/nao/think-ep1',
+    category: 'Article'
+  },
+    {
+    date: '2026-03-23',
+    slug: 'one-think-ep1',
+    title: '新記事「当事者性がある限りリアルタイムでの客観視は普通はできない」を公開しました',
+    content: '当事者性と客観性についてを語りました。',
+    link:'https://naomina121.com/one/think-ep1',
+    category: 'Article'
+    },
     {
     date: '2026-03-18',
     slug: 'nao-did-ep5',
