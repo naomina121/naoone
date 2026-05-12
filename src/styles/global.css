@@ -362,6 +362,19 @@ blockquote:after {
   margin-left: 20px;
 }
 
+#article-body ol.list {
+  font-size: 17px;
+  padding: 20px;
+  background: #292929;
+  border: 3px solid #817718;
+  margin: 20px 0;
+  box-shadow: 0 0 4px 5px inset #212121;
+}
+
+#article-body ol.list ul {
+  margin-left: 20px;
+}
+
 #article-body details {
   margin: 20px 0;
   padding: 0px;
@@ -1295,4 +1308,72 @@ p {
 .toc-link.is-active {
   font-weight: bold;
   color: #aca034;
+}
+
+#article-body .bbs ul.bbs-menu {
+  padding: 0;
+  margin: 20px 0;
+}
+
+#article-body .bbs ul.bbs-menu li {
+  list-style-type: none;
+  border-bottom: 1px solid #3a3a3a;
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+#article-body .bbs ul.bbs-menu li:last-child {
+  border-bottom: none;
+}
+
+#article-body .bbs .bbs-meta {
+  display: flex;
+}
+
+#article-body .bbs .bbs-meta .icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+#article-body .bbs .bbs-meta .name.nao {
+  color: #5fb7db;
+}
+
+#article-body .bbs .bbs-meta .name.one {
+  color: #db5f7e;
+}
+
+#article-body .bbs .bbs-meta .name {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+#article-body .bbs .bbs-meta .last {
+  color: #929292;
+  align-content: center;
+  font-size: 14px;
+}
+
+#article-body .bbs h2.title {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+#article-body .bbs h2.title a {
+  font-size: 20px;
+  color: #fff;
+}
+
+#article-body .bbs .content p {
+  color: #8c8c8c;
+  font-size: 16px;
+}
+
+#article-body .thread-content {
+  background: #0f3b10;
+  padding: 20px;
+  box-shadow: 0 0 10px #1f1f1f inset;
+  border: 3px solid rgb(191, 192, 192);
 }

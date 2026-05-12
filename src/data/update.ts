@@ -1,6 +1,30 @@
 export const siteUpdates = [
 
     {
+    date: '2026-05-12',
+    slug: 'one-did-ep8',
+    title: '新記事「「交代人格が人生の主体になりたい、あるいは結婚をしたいと思うのは罪なのか」を公開しました',
+    content: '交代人格は結婚できるのか！？基本人格の結婚を許せるのかについてを語りました。',
+    link:'https://naomina121.com/nao/think-ep1',
+    category: 'Article'
+  },
+    {
+    date: '2026-05-12',
+    slug: 'one-did-ep7',
+    title: '新記事「交代人格が記憶を遠ざけるとはどういうことなのか」を公開しました',
+    content: '交代人格が記憶を遠ざけるということはどういうことなのかについてを説明しました。',
+    link:'https://naomina121.com/nao/think-ep1',
+    category: 'Article'
+  },
+    {
+    date: '2026-05-12',
+    slug: 'one-did-ep6',
+    title: '新記事「交代人格が基本人格の思考・認知的フラッシュバックを守るために行っていること」を公開しました',
+    content: '思考・認知的フラッシュバックについて交代人格が語りました。',
+    link:'https://naomina121.com/nao/think-ep1',
+    category: 'Article'
+  },
+    {
     date: '2026-03-23',
     slug: 'nao-think-ep1',
     title: '新記事「「人は一人で生きていけない」という言葉の本当の意味を知った35歳の私」を公開しました',
