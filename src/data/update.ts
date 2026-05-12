@@ -2,6 +2,14 @@ export const siteUpdates = [
 
     {
     date: '2026-05-12',
+    slug: 'nao-info-literacy-ep1',
+    title: '新記事「「社会的弱者生存論-なぜ生存権が必要なのか-」を公開しました',
+    content: '以前公開していた社会的弱者生存論の記事を再公開しました。',
+    link:'https://naomina121.com/nao/think-ep1',
+    category: 'Article'
+  },
+    {
+    date: '2026-05-12',
     slug: 'one-did-ep8',
     title: '新記事「「交代人格が人生の主体になりたい、あるいは結婚をしたいと思うのは罪なのか」を公開しました',
     content: '交代人格は結婚できるのか！？基本人格の結婚を許せるのかについてを語りました。',
