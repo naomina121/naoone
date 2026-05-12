@@ -13,7 +13,7 @@ export const siteUpdates = [
     slug: 'one-did-ep8',
     title: '新記事「「交代人格が人生の主体になりたい、あるいは結婚をしたいと思うのは罪なのか」を公開しました',
     content: '交代人格は結婚できるのか！？基本人格の結婚を許せるのかについてを語りました。',
-    link:'https://naomina121.com/nao/think-ep1',
+    link:'https://naomina121.com/one/did-ep8',
     category: 'Article'
   },
     {
@@ -21,7 +21,7 @@ export const siteUpdates = [
     slug: 'one-did-ep7',
     title: '新記事「交代人格が記憶を遠ざけるとはどういうことなのか」を公開しました',
     content: '交代人格が記憶を遠ざけるということはどういうことなのかについてを説明しました。',
-    link:'https://naomina121.com/nao/think-ep1',
+    link:'https://naomina121.com/one/did-ep7',
     category: 'Article'
   },
     {
@@ -29,7 +29,7 @@ export const siteUpdates = [
     slug: 'one-did-ep6',
     title: '新記事「交代人格が基本人格の思考・認知的フラッシュバックを守るために行っていること」を公開しました',
     content: '思考・認知的フラッシュバックについて交代人格が語りました。',
-    link:'https://naomina121.com/nao/think-ep1',
+    link:'https://naomina121.com/one/did-ep6',
     category: 'Article'
   },
     {
