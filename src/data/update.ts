@@ -5,7 +5,7 @@ export const siteUpdates = [
     slug: 'nao-info-literacy-ep1',
     title: '新記事「「社会的弱者生存論-なぜ生存権が必要なのか-」を公開しました',
     content: '以前公開していた社会的弱者生存論の記事を再公開しました。',
-    link:'https://naomina121.com/nao/think-ep1',
+    link:'https://naomina121.com/nao/info-literacy-ep1',
     category: 'Article'
   },
     {
