@@ -442,6 +442,8 @@ getIsUrlStartsWith("/one/") ? [
     <link rel="alternate" hreflang={lang} href={canonicalURL.toString()} />
     <link rel="alternate" hreflang="x-default" href={canonicalURL.toString()} />
     <meta name="generator" content={Astro.generator} />
+    {getIsUrlStartsWith("/nao/") && <meta name="fediverse:creator" content="@naomina121@mastodon.naomina121.com" />}
+    {getIsUrlStartsWith("/one/") && <meta name="fediverse:creator" content="@one_2025_@mastodon.naomina121.com" />}
     <title>{titleTag}</title>
   </head>
   <body>
