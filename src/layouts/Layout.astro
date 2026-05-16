@@ -404,14 +404,6 @@ getIsUrlStartsWith("/one/") ? [
 <!doctype html>
 <html lang={lang}>
   <head prefix="og: http://ogp.me/ns#">
-<script is:inline src="https://www.google.com/recaptcha/api.js"></script>
-  <script is:inline>
-  function onSubmit(token) {
-    let form = document.getElementById('contactForm');
-    if(form.reportValidity()) {
-      form.submit();
-    }
-  }</script>
     <Fragment set:html={ga4TrackingCode} />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -438,8 +430,9 @@ getIsUrlStartsWith("/one/") ? [
     {!isImage &&
     <meta name="twitter:image" content={new URL('/images/naoone.jpg', siteUrl).toString()} />
     }
-    {getIsUrl("/thanks/") ||  getIsUrl("/secret/") || getIsUrlStartsWith("/secret/") && <meta name="robots" content="noindex,nofollow" />}
-    <link rel="sitemap" href="/sitemap-index.xml" />
+    {getIsUrl("/thanks/") &&  getIsUrl("/secret/") && getIsUrlStartsWith("/secret/") && <meta name="robots" content="noindex,nofollow" />
+  }
+<link rel="sitemap" href="/sitemap-index.xml" />
     <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
     <script type="application/ld+json" set:html={JSON.stringify(pageSchema)} />
     {!getIsUrl("/updates/") && getIsUrlStartsWith("/updates/") && <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />}
