@@ -1,6 +1,14 @@
 export const siteUpdates = [
 
     {
+    date: '2026-05-19',
+    slug: 'privacy-policy-2026-05-19',
+    title: 'アクセス解析ツールなどの使用を中止しました。',
+    content: 'これまでGoogleアナリティクスを導入していましたが、導入を取りやめました。当サイトや当サイトに関連するサブドメイン含め、ユーザーの追跡は行いません。',
+    link:'https://naomina121.com/privacy',
+    category: 'Policy'
+  },
+    {
     date: '2026-05-12',
     slug: 'nao-info-literacy-ep1',
     title: '新記事「「社会的弱者生存論-なぜ生存権が必要なのか-」を公開しました',

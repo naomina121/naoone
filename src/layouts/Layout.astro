@@ -26,17 +26,6 @@ const mainId = isHome ? "main-body" : "article-body";
 const isImage = frontmatter ? frontmatter.image ? true : false : image ? true : false;
 const postTitle = frontmatter ? frontmatter.pageTitle  ? frontmatter.pageTitle : pageTitle ? pageTitle : "" : pageTitle ? pageTitle : "";
 const ogpImageURL = frontmatter ? frontmatter.image ? new URL(frontmatter.image.url, siteUrl) : image ? new URL(image.url, siteUrl) : new URL('/images/naoone.jpg', siteUrl) : image ?  new URL(image.url, siteUrl) : new URL('/images/naoone.jpg', siteUrl) ;
-const ga4TrackingId = 'G-VGYCVR3R5F';
-const ga4TrackingCode = `
-<script async src="https://www.googletagmanager.com/gtag/js?id=${ga4TrackingId}"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', '${ga4TrackingId}');
-</script>
-`;
 const Person = {
   "@type": "Person",
   "name": "Naomi Hashimoto",
@@ -51,6 +40,7 @@ const Person = {
     "https://www.youtube.com/@naomina121_blog",
     "https://thought.naomina121.com",
     "https://one.naomina121.com",
+    "https://discourse.naomina121.com"
   ],
   "jobTitle": "Author",
 };
@@ -404,7 +394,6 @@ getIsUrlStartsWith("/one/") ? [
 <!doctype html>
 <html lang={lang}>
   <head prefix="og: http://ogp.me/ns#">
-    <Fragment set:html={ga4TrackingCode} />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={descriptionContent} />
