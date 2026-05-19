@@ -8,11 +8,13 @@ const Title = frontmatter.pageTitle;
 <h2>この記事をシェアする</h2>
 <p>この記事の内容が良かったら是非、シェアしてください。</p>
 <div id="social-platforms">
+  <a class="btn btn-icon btn-mastodon" href=`https://share.joinmastodon.org/#text=${Url}` rel="nofollow noopener" target="_blank"><i class="fa-brands fa-mastodon"></i><span>Mastodon</span></a>
+  <a class="btn btn-icon btn-hatena" href=`http://b.hatena.ne.jp/add?mode=confirm&url=${Url}&title=${Title}` rel="nofollow" rel="nofollow" target="_blank"><i class="fa-solid fa-question"></i><span>B!</span></a>
 <a class="btn btn-icon btn-facebook" href=`http://www.facebook.com/share.php?u=${Url}` rel="nofollow noopener" target="_blank"><i class="fa-brands fa-facebook-f"></i><span>Facebook</span></a>
 <a class="btn btn-icon btn-x" href=`https://twitter.com/intent/tweet?url=${Url}&text=${Title}&via=naomina121` rel="nofollow noopener" target="_blank"><i class="fa-brands fa-x-twitter"></i><span><i class="fa-brands fa-x-twitter"></i></span></a>
-<a class="btn btn-icon btn-pocket" href=`http://getpocket.com/edit?url=${Url}` rel="nofollow noopener" target="_blank"><i class="fa-brands fa-get-pocket"></i><span>Pocket</span></a>
+
 <a class="btn btn-icon btn-line" href=`http://line.me/R/msg/text/?${Url}%0a${Title}` target="_blank" rel="nofollow noopener"><i class="fa-solid fa-phone"></i><span>Line</span></a>
-<a class="btn btn-icon btn-hatena" href=`http://b.hatena.ne.jp/add?mode=confirm&url=${Url}&title=${Title}` rel="nofollow" rel="nofollow" target="_blank"><i class="fa-solid fa-question"></i><span>B!</span></a>
+<!-- <a class="btn btn-icon btn-pocket" href=`http://getpocket.com/edit?url=${Url}` rel="nofollow noopener" target="_blank"><i class="fa-brands fa-get-pocket"></i><span>Pocket</span></a> -->
 </div>
 
 <button id="copyUrlBtn">記事のURLをコピー</button>
@@ -124,20 +126,20 @@ const Title = frontmatter.pageTitle;
 
 /*Facebook*/
 .btn-facebook:hover > i,.btn-facebook:focus > i {
-  color:#23365d;
+  color:#6d602a;
 }
 
 .btn-facebook > span {
-  background:#23365d;
+  background:#6d602a;
 }
 
 /*x*/
 .btn-x:hover > i,.btn-x:focus > i {
-  color:#74590d;
+  color:#642717;
 }
 
 .btn-x > span {
-  background:#74590d;
+  background:#642717;
 }
 
 /*Line*/
@@ -156,6 +158,15 @@ const Title = frontmatter.pageTitle;
 
 .btn-hatena > span {
   background:#154966;
+}
+
+/*mastodon*/
+.btn-mastodon:hover > i,.btn-mastodon:focus > i {
+  color:#6262cf;
+}
+
+.btn-mastodon > span {
+  background:#393985;
 }
 
 /*pocket*/
