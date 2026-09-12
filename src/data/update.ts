@@ -1,5 +1,12 @@
 export const siteUpdates = [
-
+    {
+    date: '2026-09-12',
+    slug: 'community-2026-09-12',
+    title: 'コミュニティ設立しました',
+    content: '個人管理のコミュニティを設立しました。詳しくはサイトのメニューにあるコミュニティから。',
+    link:'https://naomina121.com/community',
+    category: 'Technical'
+  },
     {
     date: '2026-05-19',
     slug: 'privacy-policy-2026-05-19',
