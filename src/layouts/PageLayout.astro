@@ -24,6 +24,6 @@ const { pageTitle, image, pubDate, modDate } = Astro.props;
   {image &&
     <img class="profile-picture max-w-full h-auto" src={image.url} alt={pageTitle} />
   }
-  {!getIsUrl("/community")&&!getIsUrl("/thanks")&&!getIsUrl("/404")&&!getIsUrl("/updates/") && !getIsUrlStartsWith("/updates/") && !getIsUrl("/") && !getIsUrl("/privacy/") && !getIsUrl("/disclaimer/") && !getIsUrl("/contact/") && <MainToc />}
+  {!getIsUrl("/community/")&&!getIsUrl("/thanks/")&&!getIsUrl("/404")&&!getIsUrl("/updates/") && !getIsUrlStartsWith("/updates/") && !getIsUrl("/") && !getIsUrl("/privacy/") && !getIsUrl("/disclaimer/") && !getIsUrl("/contact/") && <MainToc />}
   <slot />
 </Layout>
