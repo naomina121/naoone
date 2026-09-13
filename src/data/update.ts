@@ -1,5 +1,13 @@
 export const siteUpdates = [
     {
+    date: '2026-09-14',
+    slug: 'privacy-policy-2026-09-14',
+    title: 'プライバシーポリシーの改定と、お問い合わせを設置しました。',
+    content: 'コミュニティ運営につきまして、重要なプライバシーポリシーの改定と、お問い合わせを設置しました、ご確認お願いします',
+    link:'https://naomina121.com/privacy',
+    category: 'Policy'
+  },
+    {
     date: '2026-09-12',
     slug: 'community-2026-09-12',
     title: 'コミュニティ設立しました',

@@ -394,6 +394,14 @@ getIsUrlStartsWith("/one/") ? [
 <!doctype html>
 <html lang={lang}>
   <head prefix="og: http://ogp.me/ns#">
+    <script is:inline src="https://www.google.com/recaptcha/api.js"></script>
+  <script is:inline>
+  function onSubmit(token) {
+    let form = document.getElementById('contactForm');
+    if(form.reportValidity()) {
+      form.submit();
+    }
+  }</script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={descriptionContent} />
