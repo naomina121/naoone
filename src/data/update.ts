@@ -1,5 +1,14 @@
 export const siteUpdates = [
-    {
+      {
+    date: '2026-12-05',
+    slug: 'community-2026-09-12',
+    title: '当サイトを一時休止します',
+    content: 'コミュニティ運営に関しても受付を休止いたします',
+    link:'https://naomina121.com/pause',
+    category: 'Technical'
+  },  
+  
+  {
     date: '2026-09-14',
     slug: 'privacy-policy-2026-09-14',
     title: 'プライバシーポリシーの改定と、お問い合わせを設置しました。',
