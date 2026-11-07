@@ -1,7 +1,7 @@
 export const siteUpdates = [
       {
-    date: '2026-12-05',
-    slug: 'community-2026-09-12',
+    date: '2026-11-07',
+    slug: 'community-2026-11-07',
     title: '当サイトを一時休止します',
     content: 'コミュニティ運営に関しても受付を休止いたします',
     link:'https://naomina121.com/pause',
