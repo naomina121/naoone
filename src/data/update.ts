@@ -1,4 +1,21 @@
 export const siteUpdates = [
+        {
+    date: '2026-11-12',
+    slug: 'site-2026-11-12',
+    title: 'メニューの一部削除いたしました',
+    content: 'コミュニティ機能を削除し、ブログのリンクはリンク集と重なってたため削除しています。',
+    link:'https://naomina121.com/contents_delete',
+    category: 'Technical'
+  },  
+  
+  {
+    date: '2026-11-12',
+    slug: 'privacy-policy-2026-11-12',
+    title: 'プライバシーポリシーの改定をいたしました',
+    content: 'プライバシーポリシーの改定をいたしました',
+    link:'https://naomina121.com/privacy3',
+    category: 'Policy'
+  },
       {
     date: '2026-11-07',
     slug: 'community-2026-11-07',
@@ -13,7 +30,7 @@ export const siteUpdates = [
     slug: 'privacy-policy-2026-09-14',
     title: 'プライバシーポリシーの改定と、お問い合わせを設置しました。',
     content: 'コミュニティ運営につきまして、重要なプライバシーポリシーの改定と、お問い合わせを設置しました',
-    link:'https://naomina121.com/privacy',
+    link:'https://naomina121.com/privacy2',
     category: 'Policy'
   },
     {
